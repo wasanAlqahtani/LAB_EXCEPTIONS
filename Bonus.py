@@ -25,10 +25,8 @@ def main():
             unit = splited_input[1].upper()
             #use another try to see if the user enter valid tempreture
             #when convert the string to float it will check if there an error it will raise error
-            try:
-                tempreture_degree= float(tempreature_value) 
-            except Exception:
-                 raise ValueError("Invalid value. please use numeric values")
+            tempreture_degree= float(tempreature_value) 
+
             #check if the unit is valid or not 
             if unit == "F":
                   print(f"Temperature in Celsius: {fahrenheit_to_celsius(tempreture_degree)} C")
@@ -40,7 +38,7 @@ def main():
                   raise TypeError(" Invalid unit. Please use 'C' for Celsius or 'F' for Fahrenheit.")
        #handle the exception           
         except ValueError as e:
-            print(e)
+            print("Invalid value. please use numeric values")
         except TypeError as e:
             print (e)
         except Exception as e:
