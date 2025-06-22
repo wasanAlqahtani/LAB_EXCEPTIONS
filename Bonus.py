@@ -23,8 +23,6 @@ def main():
             splited_input=temperature_string.split(" ")
             tempreature_value = splited_input[0]
             unit = splited_input[1].upper()
-            #use another try to see if the user enter valid tempreture
-            #when convert the string to float it will check if there an error it will raise error
             tempreture_degree= float(tempreature_value) 
 
             #check if the unit is valid or not 
